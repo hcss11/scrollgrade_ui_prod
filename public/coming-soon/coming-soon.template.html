@@ -7,16 +7,6 @@
   </div>
   <div flex="5"></div>
   <div flex="50">
-    <div layout="column" layout-gt-sm="row">
-      <div flex-gt-sm="50">
-        <div layout="row" layout-align="center center">
-          <iframe width="560" height="315"
-            ng-src="{{$ctrl.videoSource}}"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
       <div flex-gt-sm="50">
         <div layout="column" layout-align="center center">
           <div>
@@ -76,6 +66,16 @@
         </div>
       </div>
     </div>
+    <div layout="column" layout-gt-sm="row">
+      <div flex-gt-sm="50">
+        <div layout="row" layout-align="center center">
+          <iframe width="560" height="315"
+            ng-src="{{$ctrl.videoSource}}"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
   </div>
   <div flex="15">
     <div class="card-footer">
