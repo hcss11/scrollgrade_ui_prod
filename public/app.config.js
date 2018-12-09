@@ -7,9 +7,9 @@ angular.
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
-        when('/problems', {
-          template: '<problem-scroll></problem-scroll>'
+        when('/comingSoon', {
+          template: '<coming-soon></coming-soon>'
         }).
-        otherwise('/problems');
+        otherwise('/comingSoon');
     }
   ]);

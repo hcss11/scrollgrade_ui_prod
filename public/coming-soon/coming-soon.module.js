@@ -1,7 +1,7 @@
 'use strict';
 
-// Define the `phonecatApp` module
-angular.module('problemScroll', [
+// Define the `comingSoon` module
+angular.module('comingSoon', [
   'ngAnimate',
   'ngRoute',
   'ngMaterial',

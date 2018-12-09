@@ -1,58 +1,96 @@
-<h1>Scroll Grade Test</h1>
-<p>{{$ctrl.header}}</p>
-<div ng-cloak>
-  <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="one">
-        <md-content class="md-padding">
-            <h1> Draw polygon depending on n </h1>
-            <md-input-container>
-              <label>Nodes</label>
-              <input ng-model="$ctrl.nodes">
-            </md-input-container>
-            <p> The number of nodes {{$ctrl.nodes}}</p>
-        </md-content>
-      </md-tab>
-      <md-tab label="two">
-        <md-content class="md-padding">
-          <h1> Longest Increasing Subsequence </h1>
-          <md-input-container>
-            <label>Add Number</label>
-            <input ng-model="$ctrl.number">
-          </md-input-container>
-          <md-button class="md-raised md-primary" ng-click="$ctrl.addToSequence()">
-            Add
-          </md-button>
-          <md-button class="md-raised md-primary" ng-click="$ctrl.clearSequence()">
-            Clear Sequence
-          </md-button>
-          <p>The sequence is {{$ctrl.sequence}}</p>
-          <p>The longest increasing sequence is {{$ctrl.longestsequence}}</p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+<div class="container-fluid backgroundContainer card" layout="column">
+  <div flex="30">
+    <div layout="row" layout-align="center center">
+        <img class="titleBox" ng-src="images/TransparentTitle.png"
+              style="max-width:100%; height:auto;" />
+    </div>
+  </div>
+  <div flex="5"></div>
+  <div flex="50">
+    <div layout="column" layout-gt-sm="row">
+      <div flex-gt-sm="50">
+        <div layout="row" layout-align="center center">
+          <iframe width="560" height="315"
+            ng-src="{{$ctrl.videoSource}}"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div flex-gt-sm="50">
+        <div layout="column" layout-align="center center">
+          <div>
+            <div class="featureBox small-font col-8">
+              Grade hand written work 75% <b>faster</b>
+            </div>
+            <div class="featureBox">
+              <b>Automated. Supervised by you</b>
+            </div>
+            <div class="featureBox">
+              <b>Sign up today!</b>
+            </div>
+            <div class="row contactBox">
+                <div layout="row">
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Name</label>
+                    <input md-maxlength="30" required name="name" ng-model="$ctrl.user.name" />
+                    <div class="hint" ng-if="showHints">Tell us what we should call you!</div>
+                    <div ng-messages="userForm.name.$error" ng-if="!showHints">
+                      <div ng-message="required">Name is required.</div>
+                      <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                    </div>
+                  </md-input-container>
+                  <div flex="5" hide-xs hide-sm>
+                    <!-- Spacer //-->
+                  </div>
+
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>University</label>
+                    <input name="social" ng-model="user.social" ng-pattern="/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/" />
+
+                    <div class="hint" ng-if="showHints">###-##-####</div>
+
+                    <div ng-messages="userForm.social.$error" ng-if="!showHints">
+                      <div ng-message="pattern">###-##-#### - Please enter a valid SSN.</div>
+                    </div>
+                  </md-input-container>
+                </div>
+                <div layout="row">
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Email</label>
+                    <input name="email" ng-model="$ctrl.user.email"
+                      required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                      <div class="hint" ng-show="showHints">How can we reach you?</div>
+                      <div ng-messages="userForm.email.$error" ng-hide="showHints">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                          Your email must be between 10 and 100 characters long and look like an e-mail address.
+                        </div>
+                      </div>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="center center">
+                  <md-button class="md-raised md-primary">Sign Up</md-button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div flex="15">
+    <div class="card-footer">
+        <div style="float: right">
+        Powered by NYU &nbsp;
+        <img ng-src="images/startEDlogo.png"
+            class="startedLogo"
+            alt="startED's logo"
+            height="25"
+            width="75"/>
+        </div>
+    </div>
+  </div>
 </div>
 
-<script>
-
-// http://forum.Processing.org/two/discussion/13051/
-// how-do-i-bind-p5-canvas-to-an-html-page
-
-// GoToLoop (2015-Oct-16)
-
-function setup() {
-  const canvasHolder = select('#canvasHolder'),
-        canvasWidth  = canvasHolder.width,
-        canvasHeight = canvasHolder.height;
-
-  console.log(canvasHolder);
-  print(canvasWidth + ', ' + canvasHeight);
-
-  createCanvas(canvasWidth, canvasHeight).parent('canvasHolder');
-
-  fill('blue').stroke('red').strokeWeight(2.5).background(0).noLoop();
-  rectMode(CENTER).rect(width>>1, height>>1, width>>1, height>>1);
-}
-
-</script>
+<!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand">Fixed bottom</a>
+</nav> -->

@@ -1,10 +1,71 @@
-#canvasHolder {
-    width: 700px;
-    height: 450px;
+.backgroundContainer{
+    background-image: url(../images/background_leftShaded.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+}
+
+.titleBox{
+    width: 750px;
+    height: 246px;
+}
+
+.videoBg{
+    background-color: brown;
+    height: 300px;
+}
+
+.featureBox{
+    height: auto;
+    margin: 10px;
+    font-size: 26px;
+    color: #efefff;
+}
+
+.small-font{
+    font-size: 18px;
+}
+
+.large-font{
+    font-size: 32px;
+}
+
+.contactBox{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card-footer{
     position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: indigo;
+    color: lavender;
+}
+
+.btn-primary{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: indigo;
+    border-color: indigo;
+}
+
+.form-control{
+    opacity: 0.7;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.startedLogo{
+    background-color: black;
+    padding:2px;
+}
+
+.notifyBoxPadding{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}

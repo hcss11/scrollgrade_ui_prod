@@ -6,5 +6,5 @@ angular.module('scrollGradeApp', [
   'ngRoute',
   'ngMaterial',
   'ngMessages',
-  'problemScroll'
+  'comingSoon'
 ]);
