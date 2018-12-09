@@ -1,4 +1,6 @@
-<div class="container-fluid backgroundContainer card" layout="column">
+<div class="container-fluid backgroundContainer card"
+  layout="column"
+  style="margin:none;">
   <div flex="30">
     <div layout="row" layout-align="center center">
         <img class="titleBox" ng-src="images/TransparentTitle.png"
@@ -6,7 +8,7 @@
     </div>
   </div>
   <div flex="5"></div>
-  <div flex="50">
+  <div flex>
     <div layout="column" layout-gt-sm="row">
       <div flex-gt-sm="50">
         <div layout="column" layout-align="center center">
@@ -77,9 +79,12 @@
       </div>
     </div>
   </div>
-  <div flex="15">
-    <div class="card-footer">
-        <div style="float: right">
+  <div flex="8">
+    <md-toolbar md-colors="{background: 'myTheme-accent-900-0.43'}">
+      <div class="md-toolbar-tools"
+        style="position: fixed-bottom; margin:0; width: 100%"
+        layout="row" layout-align="end center">
+        <div>
         Powered by NYU &nbsp;
         <img ng-src="images/startEDlogo.png"
             class="startedLogo"
@@ -87,7 +92,8 @@
             height="25"
             width="75"/>
         </div>
-    </div>
+      </div>
+    </md-toolbar>
   </div>
 </div>
 
