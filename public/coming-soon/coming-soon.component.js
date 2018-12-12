@@ -9,10 +9,6 @@ angular.
       function ProblemListController($sce, signupFactory, $mdColorPalette) {
         var self = this;
 
-        self.colors = Object.keys($mdColorPalette);
-
-        console.log(self.colors);
-
         self.header = "Scroll Grade Test";
 
         self.nodes = 2;
