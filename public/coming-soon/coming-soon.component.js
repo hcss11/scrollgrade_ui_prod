@@ -24,9 +24,7 @@ angular.
         self.signedUp = true;
 
         self.signupClick = function() {
-          console.log(self.user);
           signupFactory.signupUser(self.user).then(function(response) {
-            console.log(response.data);
             if (response.status == 201) {
               self.signedUp = false;
               self.signedUpUser = response.data;
