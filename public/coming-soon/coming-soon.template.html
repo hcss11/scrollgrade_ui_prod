@@ -49,11 +49,6 @@
                       aria-describedby="basic-addon1"
                       ng-model="$ctrl.user.school">
                   </div>
-
-                  <!-- <md-input-container class="md-block" flex-gt-sm>
-                    <label>University</label>
-                    <input name="social" ng-model="$ctrl.user.school" />
-                  </md-input-container> -->
                 </div>
                 <div layout="column">
                   <div class="input-group mb-4">
@@ -62,19 +57,7 @@
                       aria-describedby="basic-addon1"
                       ng-model="$ctrl.user.email">
                   </div>
-                  <!-- <md-input-container class="md-block" flex-gt-sm
-                     md-colors="{color: 'blue-A100', 'border-color': 'primary-600'}">
-                    <label>Email</label>
-                    <input name="email" ng-model="$ctrl.user.email"
-                      required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                      <div class="hint" ng-show="showHints">How can we reach you?</div>
-                      <div ng-messages="userForm.email.$error" ng-hide="showHints">
-                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                          Your email must be between 10 and 100 characters long and look like an e-mail address.
-                        </div>
-                      </div>
-                    </md-input-container> -->
-                    <div layout="row" layout-align="center center">
+                  <div layout="row" layout-align="center center">
                       <md-button class="md-raised md-primary"
                         ng-click="$ctrl.signupClick()">
                         Sign Up
