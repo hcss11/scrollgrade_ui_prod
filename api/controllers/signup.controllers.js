@@ -19,7 +19,7 @@ module.exports.addUser = function(req, res) {
                 console.log(user);
                 res
                     .status(201)
-                    .json("Thank you for signing up!");
+                    .json("Thank you for signing up " + user.name + "!" );
             }
         });
 

@@ -5,8 +5,8 @@ angular.
   module('comingSoon').
   component('comingSoon', {
     templateUrl: 'coming-soon/coming-soon.template.html',
-    controller: ['$sce',
-      function ProblemListController($sce) {
+    controller: ['$sce','signupFactory',
+      function ProblemListController($sce, signupFactory) {
         var self = this;
 
         self.header = "Scroll Grade Test";
@@ -15,6 +15,27 @@ angular.
 
         self.videoSource = $sce.trustAsResourceUrl("//www.youtube.com/embed/YkuA0NE1f5w");
 
+        self.user = {
+          name: '',
+          email: '',
+          school: ''
+        };
+
+        self.signedUp = true;
+
+        self.signupClick = function() {
+          console.log(self.user);
+          signupFactory.signupUser(self.user).then(function(response) {
+            console.log(response.data);
+            if (response.status == 201) {
+              self.signedUp = false;
+              self.signedUpUser = response.data;
+              self.user.name = '';
+              self.user.email = '';
+              self.user.school = '';
+            }
+          });
+        };
       }
     ]
   });

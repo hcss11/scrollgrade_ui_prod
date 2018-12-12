@@ -5,5 +5,6 @@ angular.module('comingSoon', [
   'ngAnimate',
   'ngRoute',
   'ngMaterial',
-  'ngMessages'
+  'ngMessages',
+  'core.signup'
 ]);

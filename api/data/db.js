@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb+srv://setup_admin:WTYx0IUoqs5yGsxc@cluster0-yx3bc.mongodb.net/test';
+var dburl = 'mongodb+srv://setup_admin:WTYx0IUoqs5yGsxc@cluster0-yx3bc.mongodb.net/scrollgrade_initial_signup';
 
 mongoose.connect(dburl);
 
