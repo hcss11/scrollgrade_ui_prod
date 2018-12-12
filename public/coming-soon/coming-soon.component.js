@@ -5,9 +5,13 @@ angular.
   module('comingSoon').
   component('comingSoon', {
     templateUrl: 'coming-soon/coming-soon.template.html',
-    controller: ['$sce','signupFactory',
-      function ProblemListController($sce, signupFactory) {
+    controller: ['$sce','signupFactory','$mdColorPalette',
+      function ProblemListController($sce, signupFactory, $mdColorPalette) {
         var self = this;
+
+        self.colors = Object.keys($mdColorPalette);
+
+        console.log(self.colors);
 
         self.header = "Scroll Grade Test";
 
