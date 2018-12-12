@@ -22,9 +22,9 @@
             <div class="featureBox" ng-show="$ctrl.signedUp">
               <b>Sign up today!</b>
             </div>
-            <div class="row contactBox" ng-show="$ctrl.signedUp">
+            <div layout="column" ng-show="$ctrl.signedUp">
                 <div layout="row">
-                  <md-input-container class="md-block" flex-gt-sm>
+                  <!-- <md-input-container class="md-block" flex-gt-sm>
                     <label>Name</label>
                     <input md-maxlength="30" required name="name" ng-model="$ctrl.user.name" />
                     <div class="hint" ng-if="showHints">Tell us what we should call you!</div>
@@ -32,18 +32,37 @@
                       <div ng-message="required">Name is required.</div>
                       <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                     </div>
-                  </md-input-container>
+                  </md-input-container> -->
+                  <div class="input-group mb-4">
+                    <input type="text" class="form-control"
+                      placeholder="Name" aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      ng-model="$ctrl.user.name">
+                  </div>
                   <div flex="5" hide-xs hide-sm>
                     <!-- Spacer //-->
                   </div>
 
-                  <md-input-container class="md-block" flex-gt-sm>
+                  <div class="input-group mb-2">
+                    <input type="text" class="form-control"
+                      placeholder="School" aria-label="University"
+                      aria-describedby="basic-addon1"
+                      ng-model="$ctrl.user.school">
+                  </div>
+
+                  <!-- <md-input-container class="md-block" flex-gt-sm>
                     <label>University</label>
                     <input name="social" ng-model="$ctrl.user.school" />
-                  </md-input-container>
+                  </md-input-container> -->
                 </div>
-                <div layout="row">
-                  <md-input-container class="md-block" flex-gt-sm
+                <div layout="column">
+                  <div class="input-group mb-4">
+                    <input type="text" class="form-control"
+                      placeholder="Email" aria-label="Email"
+                      aria-describedby="basic-addon1"
+                      ng-model="$ctrl.user.email">
+                  </div>
+                  <!-- <md-input-container class="md-block" flex-gt-sm
                      md-colors="{color: 'blue-A100', 'border-color': 'primary-600'}">
                     <label>Email</label>
                     <input name="email" ng-model="$ctrl.user.email"
@@ -54,13 +73,13 @@
                           Your email must be between 10 and 100 characters long and look like an e-mail address.
                         </div>
                       </div>
-                    </md-input-container>
-                </div>
-                <div layout="row" layout-align="center center">
-                  <md-button class="md-raised md-primary"
-                    ng-click="$ctrl.signupClick()">
-                    Sign Up
-                  </md-button>
+                    </md-input-container> -->
+                    <div layout="row" layout-align="center center">
+                      <md-button class="md-raised md-primary"
+                        ng-click="$ctrl.signupClick()">
+                        Sign Up
+                      </md-button>
+                    </div>
                 </div>
             </div>
             <div class="featureBox" ng-show="!$ctrl.signedUp">
