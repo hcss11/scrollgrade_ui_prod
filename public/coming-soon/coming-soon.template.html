@@ -49,7 +49,8 @@
                   </md-input-container>
                 </div>
                 <div layout="row">
-                  <md-input-container class="md-block" flex-gt-sm>
+                  <md-input-container class="md-block" flex-gt-sm
+                     md-colors="{color: 'blue-A100', 'border-color': 'primary-600'}">
                     <label>Email</label>
                     <input name="email" ng-model="$ctrl.user.email"
                       required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
